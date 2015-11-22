@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class=" blue darken-1" ng-controller="NavCtrl">
+        <ul>
+            <li><a href="" ng-click="logout()" ng-if="isLoggedIn">Logout</a></li>
+            <li><a href="" ng-if="user"><strong>Signed In as </strong>{{user}}</a></li>
+        </ul>
+    </nav>
+    <div id="uiview" ui-view></div>
+    <!--JS FILES-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="angular/app.concat.js"></script>
+</body>
+</html>
